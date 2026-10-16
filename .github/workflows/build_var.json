@@ -1,5 +1,8 @@
 {
-    "targets": ["template_debug", "template_release"],
+    "targets": [
+        "template_debug",
+        "template_release"
+    ],
     "common_flags": "enable_fts5=yes enable_math_functions=yes",
     "default_skip": true,
     "jobs": [
@@ -19,6 +22,15 @@
             "artifact-extension": "nothreads.wasm",
             "flags": "threads=no",
             "cache-name": "web-wasm32-nothreads",
+            "skip": false
+        },
+        {
+            "name": "Android (arm64)",
+            "os": "ubuntu-22.04",
+            "platform": "android",
+            "artifact-extension": "so",
+            "flags": "arch=arm64",
+            "cache-name": "android-arm64",
             "skip": false
         }
     ]
